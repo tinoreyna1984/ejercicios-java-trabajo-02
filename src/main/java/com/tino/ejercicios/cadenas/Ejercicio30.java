@@ -18,6 +18,6 @@ public class Ejercicio30 {
         List<String> listaPalabras = Arrays.stream(texto.split(" ")).toList();
         String nuevaCadena = unirConDelim(listaPalabras, delim);
         System.out.println("Texto original: " + texto);
-        System.out.println("Texto con delimitador: " + nuevaCadena);
+        System.out.println("Texto con delimitador: " + nuevaCadena); // "Esta-es-una-cadena-de-prueba"
     }
 }
