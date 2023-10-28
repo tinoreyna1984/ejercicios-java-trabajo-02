@@ -4,13 +4,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Lee un párrafo de texto y busca y valida todas
- * las direcciones de correo electrónico presentes en el texto.
+ * Lee un tuit y extrae todas las menciones de
+ * usuarios de Twitter (@nombredeusuario) presentes en el mensaje.
  */
-public class Ejercicio17 {
+public class Ejercicio27 {
     public static void main(String[] args) {
-        String regex = "\\w[a-z0-9_.]+@[a-z0-9_.]+.[a-z]{2,3}.[a-z]{2,3}";
-        String texto = "Por favor, escribe a tino@mail.com, gaby@correo.com y pepe@mail.com";
+        String regex = "(@[a-zA-Z_0-9]{1,})";
+        String texto = "Un saludo a @usuarioDePrueba y a @usuario_123.";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(texto);
         while (matcher.find()){

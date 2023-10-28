@@ -1,5 +1,9 @@
 package com.tino.ejercicios.regex;
 
+/**
+ * Lee un texto y extrae todas las palabras en un idioma específico.
+ * Puedes utilizar una expresión regular para definir las reglas de validación de palabras en ese idioma.
+ */
 public class Ejercicio19 {
     public static void main(String[] args) {
         String regex = "([a-z]*\\ñ[a-z]*)"; // especificamente para idioma español
