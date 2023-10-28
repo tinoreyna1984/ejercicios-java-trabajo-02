@@ -19,12 +19,12 @@ public class Ejercicio20 {
                         "<!-- hola mundo 03-->\n" +
                         "</body>\n" +
                         "</html>";
-        String regex = "<!--(.*?)-->";
+        String regex = "(?<=\\<\\!--\\s?)(.*)(?=\\s?--\\>)";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(codigo);
         while (matcher.find()){
             // encuentro los comentarios como "<!-- hola mundo -->" y extraigo solo el texto
-            System.out.println(matcher.group().replaceAll("\\p{Punct}",""));
+            System.out.println(matcher.group());
         }
     }
 }
